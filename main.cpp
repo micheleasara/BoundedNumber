@@ -79,10 +79,8 @@ int main() {
 
   // Compile-time Errors:
   // constexpr auto dbnInvalidType = dBn(10.0); // Error: double not allowed
-  // constexpr auto dbnInvalidBounds = BoundedNumber<unsigned char, -128,
-  // 127>(128); // Error: -128 not valid for unsigned constexpr auto
-  // dbnInvalidLiteral = 10.3_dbn; // Error: fractional literals not allowed for
-  // _dbn
+  // constexpr auto dbnInvalidBounds = BoundedNumber<unsigned char, -128, 127>(128); // Error: -128 not valid for unsigned char
+  // constexpr auto dbnInvalidLiteral = 10.3_dbn; // Error: fractional literals not allowed for _dbn
 
   // Example 5: Valid construction with in-range value
   constexpr auto dbInRange = dB(-10.5);
